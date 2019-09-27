@@ -12,7 +12,7 @@ class App extends Component{
     return (
       <Container>
         <Button success>Hello</Button>
-        <Button danger>Hello</Button>
+        <Button danger roatationTime={5}>Hello</Button>
         <Anchor href="http://google.co.kr">Go to google</Anchor>
       </Container>
     );
@@ -38,7 +38,7 @@ const Button = styled.button`
   background-color: ${props => props.danger? "#e74c3c" : "#2ecc71"};
   ${props => {
     if(props.danger){
-      return css`animation: ${rotation} 2s linear infinite`
+      return css`animation: ${rotation} ${props.rotationsTime} linear infinite`
     }
   }}
 `;
